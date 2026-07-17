@@ -57,8 +57,8 @@ source("run_all.R")
 
 1. **Shapefile of Colombian municipalities** (Marco Geoestadistico
    Nacional, DANE)
-2. **2005 informality estimate** (2005 Census) —
-3. **Coca-crop hectares** (UNODC/SIMCI) —
+2. **2005 informality estimate** (2005 Census) 
+3. **Coca-crop hectares** (UNODC/SIMCI) 
 4. **Department shapefile**
 
 ## Original database variable dictionary
@@ -114,13 +114,13 @@ in the CSV. Variable names are kept in their original Spanish as they where coll
 | `pgroup5` | Share of women aged 25-54 in the municipality. |
 | `pgroup6` | Share of women over 54 in the municipality. |
 | `num_obser_freq` * | Number of GEIH survey observations (sample size) used for the direct estimate of the municipality-year. |
-| `num_obser_freq_adj` * | Effective number of GEIH observations, adjusted for the survey design effect (this is the `eff_n` used in `04_estimation_fh_arcsin.R` for the direct estimator's variance). |
+| `num_obser_freq_adj` * | Effective number of GEIH observations, adjusted for the survey design effect. |
 | `informales_freq` * | Raw count of informal workers in the GEIH sample for the municipality-year. |
 | `informales_freq_adj` * | Adjusted/weighted (design-corrected) count of informal workers in the GEIH sample. |
-| `ocupados_freq` * | Raw count of employed persons in the GEIH sample for the municipality-year (the denominator of the informality rate). |
+| `ocupados_freq` * | Raw count of employed persons in the GEIH sample for the municipality-year. |
 | `ocupados_freq_adj` * | Adjusted/weighted count of employed persons in the GEIH sample. |
 | `informalidad` | Direct GEIH estimate of informality, for municipalities where the survey is representative. |
-| `informalidad_adj` * | Direct GEIH estimate of informality computed from the adjusted counts (`informales_freq_adj` / `ocupados_freq_adj`); this is the one the pipeline uses as `direct_pct` in `04_estimation_fh_arcsin.R`. |
+| `informalidad_adj` * | Direct GEIH estimate of informality computed from the adjusted counts (`informales_freq_adj` / `ocupados_freq_adj`). |
 | `informalidad_adj_var` | Variance of the `informalidad_adj` direct estimator. |
 | `fharcsin_est` (computed in step 4) | Small Area Estimation estimate using arcsine-transformed Fay-Herriot. |
 | `Low` / `Up` (step 4) * | Lower/upper confidence interval bounds of `fharcsin_est`. |
